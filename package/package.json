@@ -13,11 +13,6 @@
     "url": "https://github.com/aldeed/simpl-schema/issues"
   },
   "homepage": "https://github.com/aldeed/simpl-schema",
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
-  ],
   "main": "./dist/main.js",
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
   "scripts": {
