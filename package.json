@@ -1,0 +1,53 @@
+{
+  "name": "simpl-schema",
+  "version": "0.0.0-development",
+  "description": "A schema validation package that supports direct validation of MongoDB update modifier objects.",
+  "author": "Eric Dobbertin <aldeed@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aldeed/simpl-schema.git"
+  },
+  "homepage": "https://github.com/aldeed/simpl-schema",
+  "main": "./dist/main.js",
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
+  "scripts": {
+    "build": "cd package && npm run build && rm -rf ../dist && mv ./dist ./../",
+    "prepublishOnly": "npm run build",
+    "postinstall": "npm run build"
+  },
+  "dependencies": {
+    "clone": "^2.1.2",
+    "message-box": "^0.2.7",
+    "mongo-object": "^0.1.4",
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.0",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-object-rest-spread": "^7.18.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.18.0",
+    "@babel/register": "^7.17.7",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-plugin-add-module-exports": "^1.0.4"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": false
+        }
+      ],
+      [
+        "add-module-exports",
+        {
+          "addDefaultProperty": true
+        }
+      ]
+    ]
+  }
+}
